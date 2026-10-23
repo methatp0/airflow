@@ -95,6 +95,7 @@ def test_accepts_an_explicit_task_field_at_its_schema_default():
 
     assert compare(PYTHON, sdk, get_task_defaults()) == []
 
+
 def test_accepts_an_explicit_dag_field_at_its_schema_default():
     sdk = copy.deepcopy(SDK)
     sdk["d"]["dag"]["fail_fast"] = False

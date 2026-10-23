@@ -155,6 +155,7 @@ def get_task_defaults() -> dict[str, Any]:
     fields = json.loads(SCHEMA.read_text())["definitions"]["operator"]["properties"]
     return {key: field["default"] for key, field in fields.items() if field.get("default") is not None}
 
+
 def get_dag_defaults() -> dict[str, Any]:
     """Map each Dag field with a schema default to that default."""
     fields = json.loads(SCHEMA.read_text())["definitions"]["dag"]["properties"]
