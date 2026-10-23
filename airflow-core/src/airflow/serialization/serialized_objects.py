@@ -2187,6 +2187,7 @@ class DagSerialization(BaseSerialization):
         client_defaults = serialized_obj.setdefault("client_defaults", {}).setdefault("tasks", {})
         for key, value in task_defaults.items():
             client_defaults.setdefault(key, value)
+
     @classmethod
     def validate_serialized_dag(cls, serialized_obj: dict[str, Any]) -> SerializedDAG:
         """

@@ -5519,6 +5519,7 @@ class TestFillConfigDefaults:
 
         assert data["client_defaults"]["tasks"]["retries"] == 1
         assert data["client_defaults"]["tasks"]["queue"] == "celery_q"
+
     def test_leaves_a_payload_without_a_dag_to_validation(self):
         data = {"__version": 3}
 
